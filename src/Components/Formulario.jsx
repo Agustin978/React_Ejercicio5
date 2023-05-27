@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import ListaTareas from "./ListaTareas";
 
+//const tareasLS = JSON.parse(localStorage.getItem('tareas')) || [];
 
 const Formulario = () => {
     const [tarea, setTarea] = useState('');
     const [tareas, setTareas] = useState(
-        JSON.parse(localStorage.getItem('tareas') || [])
+        JSON.parse(localStorage.getItem('tareas')) || []
     );
 
     useEffect(() => {
